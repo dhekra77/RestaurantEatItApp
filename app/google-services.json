@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "353155458342",
+    "project_id": "androideatit-a93ee",
+    "storage_bucket": "androideatit-a93ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353155458342:android:2d371f19db87b02a948de7",
+        "android_client_info": {
+          "package_name": "com.example.homepc.restauranteatitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353155458342-pu9kmlsne0aahlv7s0uvn27b69brr7tg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK0trWMop0Lt1xu9sBwHqPko6CRg2D_TM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353155458342-pu9kmlsne0aahlv7s0uvn27b69brr7tg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
