@@ -1,7 +1,20 @@
 <resources>
-    <string name="app_name">FooD</string>
-    <string name="slogan">SLOGAN</string>
+    <string name="app_name">Quick</string>
+    <string name="slogan"> Cest bon, vous êtes chez Quick!</string>
     <string name="title_activity_main">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog_title">Are you sure you want to Logout ?</string>
+    <string name="dialog_popup">   Quick Restaurant</string>
+    <string name="ok" />
+    <string name="cancel" />
+
 
 
 </resources>

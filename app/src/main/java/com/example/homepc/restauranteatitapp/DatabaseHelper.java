@@ -8,19 +8,21 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
-
+/**
+ * Created by HomePC on 1/9/2018.
+ */
 
 public class DatabaseHelper extends SQLiteOpenHelper{
     public static final String DATABASE_NAME = "EatItData";
 
-                                //TABLE 1 FOR LOGIN DETAILS
+    //TABLE 1 FOR LOGIN DETAILS
 
     public  static final String TABLE_NAME = "Customers";
     public static final String COLUMN_1 = "Id";
     final String COLUMN_2 = "Name";
     public static final String COLUMN_3 = "Password";
 
-                                //TABLE 2 FOR ORDER DETAILS
+    //TABLE 2 FOR ORDER DETAILS
 
     public  static final String TABLE_NAME_2 = "OrderDetails";
     public  static final String KEY_1 = "OrderNo";
@@ -80,7 +82,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
 
-                                   //ORDER DETAILS DATABASE WORK
+    //ORDER DETAILS DATABASE WORK
 
     public boolean Add_to_Cart(String Name,String Quantity,String Price){
         SQLiteDatabase db = getWritableDatabase();

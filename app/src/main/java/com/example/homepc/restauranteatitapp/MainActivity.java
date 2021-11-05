@@ -21,8 +21,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
-       // implements NavigationView.OnNavigationItemSelectedListener
-{
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     NavigationView navigationView = null;
     Toolbar toolbar = null;
@@ -39,11 +38,11 @@ public class MainActivity extends AppCompatActivity
 
         Intent i = getIntent();
         String save1 = i.getStringExtra("Name_marker");
-       // String save2 = i.getStringExtra("pass_marker");
+        // String save2 = i.getStringExtra("pass_marker");
 
 
-            Toast.makeText(getApplicationContext(),"Hello " + save1+ " , Welcome to Eat It Restaurant",Toast.LENGTH_SHORT).show();
-         //   Toast.makeText(getApplicationContext(),save2,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Hello " + save1+ " , Welcome to Eat It Restaurant",Toast.LENGTH_SHORT).show();
+        //   Toast.makeText(getApplicationContext(),save2,Toast.LENGTH_SHORT).show();
 
 
         //DEFAULT FRAGMENT
@@ -71,6 +70,14 @@ public class MainActivity extends AppCompatActivity
 
 
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -105,5 +112,130 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
 
+        if (id == R.id.nav_fastfood) {
+            FastFoodFragment fragment = new FastFoodFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.Fragment_container, fragment);
+            fragmentTransaction.commit();
+
+
+        }else if (id == R.id.nav_seafood) {
+
+
+            SeaFragment fragment = new SeaFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.Fragment_container, fragment);
+            fragmentTransaction.commit();
+
+        }
+        else if (id == R.id.nav_italian) {
+
+            ItalianFragment fragment = new ItalianFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.Fragment_container, fragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_continental) {
+
+            ContinentalFragment fragment = new ContinentalFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.Fragment_container, fragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_traditional) {
+
+
+            TraditionalFragment fragment = new TraditionalFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.Fragment_container, fragment);
+            fragmentTransaction.commit();
+
+        }else if (id == R.id.nav_chinese) {
+
+
+            ChineseFragment fragment = new ChineseFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.Fragment_container, fragment);
+            fragmentTransaction.commit();
+        }
+        else if(id == R.id.order_details_drawer ){
+
+            Cursor check ;
+            check = mydb.Get_OrderDetails() ;
+
+            if(check!=null && check.getCount()>0)
+            {      Intent intent = new Intent(getApplicationContext(), OrderPage.class);
+                startActivity(intent);
+            }
+            else  {Toast.makeText(getApplicationContext(),"No details found because you didn't order something...",Toast.LENGTH_SHORT).show();}
+        }
+        else if(id == R.id.submit_order ){
+
+            Cursor check ;
+            check = mydb.Get_OrderDetails() ;
+
+            if(check!=null && check.getCount()>0)
+            {   Submit_Order fragment = new Submit_Order();
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.Fragment_container, fragment);
+                fragmentTransaction.commit();
+
+            }
+            else  {Toast.makeText(getApplicationContext(),"Sorry, You don't order anything...",Toast.LENGTH_SHORT).show();}
+        }
+
+        else if(id == R.id.log_out ){
+
+            openDialog();
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+
+    }
+
+    public void openDialog() {
+
+        final Dialog builder = new Dialog(this); // Context, this, etc.
+        builder.setContentView(R.layout.dialogdesign);
+        builder.setTitle(R.string.dialog_popup);
+        builder.show();
+        logout = (Button) builder.findViewById(R.id.dialog_ok);
+        cancel = (Button) builder.findViewById(R.id.dialog_cancel);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mydb.delete_all();
+                Toast.makeText(getApplicationContext(),"Hope you like our service, Have a good day !!!",Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(),LoginOptionsPage.class);
+                startActivity(intent);
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"So you don't want to, Logout !!!",Toast.LENGTH_SHORT).show();
+                builder.dismiss();
+            }
+        });
+
+    }
 }
