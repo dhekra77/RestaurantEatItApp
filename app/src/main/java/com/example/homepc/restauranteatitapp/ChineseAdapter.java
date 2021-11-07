@@ -57,7 +57,7 @@ public class ChineseAdapter extends ArrayAdapter<ChineseClass> {
 
 
 
-        Button plus = (Button) listItemView.findViewById(R.id.plus_btn);
+       Button plus = (Button) listItemView.findViewById(R.id.plus_btn);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,16 +101,16 @@ public class ChineseAdapter extends ArrayAdapter<ChineseClass> {
                 pos = (Integer)view.getTag();
                 if(quantity != 0) { //if quan < 0 or equals to 0
                     if (pos == 0) {
-                        boolean isinserted = mydb.Add_to_Cart("Fried Rice",String.valueOf(quantity),String.valueOf(550*quantity));
+                     boolean isinserted = mydb.Add_to_Cart("Fried Rice",String.valueOf(quantity),String.valueOf(550*quantity));
                         if (isinserted)
                         {
                             int price = 1; //price * quantity = total price
-                            order_details[i] = "Id " + counter + " Fried Rice Price Rs " + 150 * quantity + " ";
+                           order_details[i] = "Id " + counter + " Fried Rice Price Rs " + 150 * quantity + " ";
                             counter++;  //var use for no of items order
                             i++;  //var uses to store data in array */
                             quantity = 0;  //holds the value for each item quantity*s/
                             Toast.makeText(getContext(), "Order Added Successfully !", Toast.LENGTH_SHORT).show();
-                        }
+                    }
                         else
                             Toast.makeText(getContext(), "Please, Try again", Toast.LENGTH_SHORT).show();
 
@@ -190,8 +190,8 @@ public class ChineseAdapter extends ArrayAdapter<ChineseClass> {
 
 
 
-            }
-        });
+                    }
+                });
 
 
 

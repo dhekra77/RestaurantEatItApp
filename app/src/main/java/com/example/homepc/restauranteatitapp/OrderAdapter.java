@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
- * Created by HomePC on 1/16/2018.
+
  */
 
 public class OrderAdapter extends ArrayAdapter<OrderClass> {
@@ -47,7 +47,7 @@ public class OrderAdapter extends ArrayAdapter<OrderClass> {
         quantityTextView.setText("Quantity : " +data_item.getItemquantity());
 
         TextView priceTextView = (TextView) listItemView.findViewById(R.id.order_item_price);
-        priceTextView.setText("Price : "+data_item.getItemPrice() + "Rs");
+        priceTextView.setText("Price : "+data_item.getItemPrice() + "Dt");
 
         return listItemView;
     }

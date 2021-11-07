@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Quick</string>
-    <string name="slogan"> Cest bon, vous êtes chez Quick!</string>
+    <string name="slogan"> Cest bon vous etes chez Quick!</string>
     <string name="title_activity_main">Menu</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -11,10 +11,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dialog_title">Are you sure you want to Logout ?</string>
-    <string name="dialog_popup">   Quick Restaurant</string>
+    <string name="dialog_popup"> Quick!</string>
     <string name="ok" />
     <string name="cancel" />
-
 
 
 </resources>

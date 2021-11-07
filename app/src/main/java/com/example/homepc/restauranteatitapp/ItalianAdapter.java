@@ -167,20 +167,20 @@ public class ItalianAdapter extends ArrayAdapter<ItalianClass> {
                     }
 
 
-                    else {  Toast.makeText(getContext(), "Quantity value can't be zero or lesser!!!", Toast.LENGTH_SHORT).show();
+                 else {  Toast.makeText(getContext(), "Quantity value can't be zero or lesser!!!", Toast.LENGTH_SHORT).show();
 
-                        int j = 0;
-                        Toast.makeText(getContext(), "" + order_details[j] + "\n" + order_details[j+1] + "\n"+ order_details[j+2] + "\n" + order_details[j+3], Toast.LENGTH_LONG).show();
-
-                    }
-
-
-
-
+                    int j = 0;
+                    Toast.makeText(getContext(), "" + order_details[j] + "\n" + order_details[j+1] + "\n"+ order_details[j+2] + "\n" + order_details[j+3], Toast.LENGTH_LONG).show();
 
                 }
 
+
+
+
+
             }
+
+                }
         });
 
 

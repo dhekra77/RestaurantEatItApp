@@ -7,9 +7,9 @@ package com.example.homepc.restauranteatitapp;
 public class FastfoodClass {
 
 
-    private String Itemname;
-    private String Itemprice;
-    private int Itemimage;
+        private String Itemname;
+        private String Itemprice;
+        private int Itemimage;
 
 
     public String Itemquantity;

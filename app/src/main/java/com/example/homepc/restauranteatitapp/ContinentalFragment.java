@@ -29,10 +29,10 @@ public class ContinentalFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_continental, container, false);
 
         ArrayList<ContinentalClass> conti_food = new ArrayList<ContinentalClass>();
-        conti_food.add(new ContinentalClass("Salsa", "6000 Dt", R.drawable.coneone,"10"));
-        conti_food.add(new ContinentalClass("Arabic Pizza", "11500 Dt", R.drawable.ctwo,"10"));
-        conti_food.add(new ContinentalClass("Macaroni", "14000 Dt", R.drawable.cthree,"10"));
-        conti_food.add(new ContinentalClass("Pan Burger", "12000 Dt", R.drawable.cfive,"10"));
+        conti_food.add(new ContinentalClass("Salsa", "650 Rs", R.drawable.coneone,"0"));
+        conti_food.add(new ContinentalClass("Arabic Pizza", "1150 Rs", R.drawable.ctwo,"0"));
+        conti_food.add(new ContinentalClass("Macaroni", "250 Rs", R.drawable.cthree,"0"));
+        conti_food.add(new ContinentalClass("Pan Burger", "190 Rs", R.drawable.cfive,"0"));
 
 
         ContinentalAdapter continentaladapter = new ContinentalAdapter(getActivity(),conti_food);

@@ -75,21 +75,19 @@
         />
 
 
-
     <Button
         android:id="@+id/signinBtn"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="8dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
         android:layout_marginLeft="10dp"
-        android:text="Sign In"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="15dp"
         android:background="@drawable/lightgreenbtns"
-        android:textColor="#FFFFFF"
-        ></Button>
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Sign In"
+        android:textColor="#FFFFFF"></Button>
 
 
 

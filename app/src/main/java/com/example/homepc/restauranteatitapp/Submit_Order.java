@@ -14,10 +14,14 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class Submit_Order extends Fragment {
 
     DatabaseHelper mydb;
-    String email = "dhekrahasnaoui@gmail.com";
+    String email = "DHEKRAimen@gmail.com";
 
     public Submit_Order() {
         // Required empty public constructor;
@@ -34,7 +38,7 @@ public class Submit_Order extends Fragment {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_EMAIL, email);
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Quick Restaurant Order  ");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Eat It Restaurant Order  ");
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
             startActivity(intent);
         }

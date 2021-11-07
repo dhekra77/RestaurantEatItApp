@@ -48,6 +48,55 @@ public class OrderPage extends AppCompatActivity {
         OrderAdapter adapter = new OrderAdapter(getApplicationContext(),list);
         listView.setAdapter(adapter);
     }
+
+
+    /*
+        public void Order_data(){
+            order.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Cursor res =   mydb.Get_OrderDetails();
+                    if(res.getCount() == 0) {
+                        showmessage("Error", "nothing found");
+                        return;
+                    }
+                    StringBuffer buffer = new StringBuffer();
+                    while (res.moveToNext()){
+
+                        buffer.append("Id : " + res.getString(0) + "\n");
+                        buffer.append("Item Name : " + res.getString(1) + "\n");
+                        buffer.append("Quantity : " + res.getString(2)+ "\n");
+                        buffer.append("Price : " + res.getString(3)+ "\n");
+
+                    }
+                    showmessage("Data",buffer.toString());
+
+
+                }
+            });
+        }
+        public void DeleteAll() {
+            delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mydb.delete_all();
+                }
+            });
+
+
+        }
+
+    */
+    public void showmessage(String title,String message){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+
+    }
+
 }
 
 
@@ -75,53 +124,4 @@ public class OrderPage extends AppCompatActivity {
 
 
 
-
-
-
-    /*public void Order_data(){
-        order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Cursor res =   mydb.Get_OrderDetails();
-                if(res.getCount() == 0) {
-                    showmessage("Error", "nothing found");
-                    return;
-                }
-                StringBuffer buffer = new StringBuffer();
-                while (res.moveToNext()){
-
-                    buffer.append("Id : " + res.getString(0) + "\n");
-                    buffer.append("Item Name : " + res.getString(1) + "\n");
-                    buffer.append("Quantity : " + res.getString(2)+ "\n");
-                    buffer.append("Price : " + res.getString(3)+ "\n");
-
-                }
-                showmessage("Data",buffer.toString());
-
-
-            }
-        });
-    }
-    public void DeleteAll() {
-        delete.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            mydb.delete_all();
-        }
-    });
-
-
-    }
-
-
-        public void showmessage(String title,String message){
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.show();
-
-    }
-*/
 

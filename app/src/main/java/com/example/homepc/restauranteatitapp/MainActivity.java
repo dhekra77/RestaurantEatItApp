@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity
 
         Intent i = getIntent();
         String save1 = i.getStringExtra("Name_marker");
-        // String save2 = i.getStringExtra("pass_marker");
+       // String save2 = i.getStringExtra("pass_marker");
 
 
-        Toast.makeText(getApplicationContext(),"Hello " + save1+ " , Welcome to Eat It Restaurant",Toast.LENGTH_SHORT).show();
-        //   Toast.makeText(getApplicationContext(),save2,Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Hello " + save1+ " , Welcome to Quick Restaurant",Toast.LENGTH_SHORT).show();
+         //   Toast.makeText(getApplicationContext(),save2,Toast.LENGTH_SHORT).show();
 
 
         //DEFAULT FRAGMENT
@@ -119,18 +119,18 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_fastfood) {
-            FastFoodFragment fragment = new FastFoodFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
+              FastFoodFragment fragment = new FastFoodFragment();
+              android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.Fragment_container, fragment);
-            fragmentTransaction.commit();
+              fragmentTransaction.replace(R.id.Fragment_container, fragment);
+              fragmentTransaction.commit();
 
 
         }else if (id == R.id.nav_seafood) {
 
 
             SeaFragment fragment = new SeaFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
+           android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.Fragment_container, fragment);
             fragmentTransaction.commit();
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.Fragment_container, fragment);
-            fragmentTransaction.commit();
+           fragmentTransaction.commit();
 
         } else if (id == R.id.nav_continental) {
 
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity
             TraditionalFragment fragment = new TraditionalFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.Fragment_container, fragment);
+           fragmentTransaction.replace(R.id.Fragment_container, fragment);
             fragmentTransaction.commit();
 
         }else if (id == R.id.nav_chinese) {
@@ -181,21 +181,7 @@ public class MainActivity extends AppCompatActivity
             }
             else  {Toast.makeText(getApplicationContext(),"No details found because you didn't order something...",Toast.LENGTH_SHORT).show();}
         }
-        else if(id == R.id.submit_order ){
 
-            Cursor check ;
-            check = mydb.Get_OrderDetails() ;
-
-            if(check!=null && check.getCount()>0)
-            {   Submit_Order fragment = new Submit_Order();
-                android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.Fragment_container, fragment);
-                fragmentTransaction.commit();
-
-            }
-            else  {Toast.makeText(getApplicationContext(),"Sorry, You don't order anything...",Toast.LENGTH_SHORT).show();}
-        }
 
         else if(id == R.id.log_out ){
 

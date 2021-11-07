@@ -1,5 +1,9 @@
 package com.example.homepc.restauranteatitapp;
 
+/**
+
+ */
+
 public class TraditionalfoodClass {
 
     private String Itemname;

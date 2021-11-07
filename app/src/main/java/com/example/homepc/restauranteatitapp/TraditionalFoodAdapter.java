@@ -12,6 +12,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * Created by HomePC on 1/9/2018.
+ */
+
 public class TraditionalFoodAdapter extends ArrayAdapter<TraditionalfoodClass> {
 
     int quantity = 0; int i = 0;
@@ -87,11 +91,11 @@ public class TraditionalFoodAdapter extends ArrayAdapter<TraditionalfoodClass> {
                 pos = (Integer)view.getTag();
                 if(quantity != 0) { //if quan < 0 or equals to 0
                     if (pos == 0) {
-                        boolean isinserted = mydb.Add_to_Cart("Karahi",String.valueOf(quantity),String.valueOf(1250*quantity));
+                        boolean isinserted = mydb.Add_to_Cart("DHEKRA",String.valueOf(quantity),String.valueOf(1250*quantity));
                         if (isinserted)
                         {
                             int price = 1; //price * quantity = total price
-                            order_details[i] = "Id " + counter + " Karahi Price Rs " + 1250 * quantity + " ";
+                            order_details[i] = "Id " + counter + " Karahi Price Dt " + 1250 * quantity + " ";
                             counter++;  //var use for no of items order
                             i++;  //var uses to store data in array */
                             quantity = 0;  //holds the value for each item quantity*s/
@@ -109,7 +113,7 @@ public class TraditionalFoodAdapter extends ArrayAdapter<TraditionalfoodClass> {
                         if (isinserted)
                         {
                             int price = 1;
-                            order_details[i] = "Id " + counter + " Biryani Price Rs " + 150 * quantity + " ";
+                            order_details[i] = "Id " + counter + " Biryani Price Dt " + 150 * quantity + " ";
                             counter++;
                             i++;
                             quantity = 0;
@@ -128,7 +132,7 @@ public class TraditionalFoodAdapter extends ArrayAdapter<TraditionalfoodClass> {
                         if (isinserted)
                         {
                             int price = 1;
-                            order_details[i] = "Id : " + counter + " Malai Boti Price Rs " + 450 * quantity + " ";
+                            order_details[i] = "Id : " + counter + " Malai Boti Price Dt " + 450 * quantity + " ";
                             counter++;
                             i++;
                             quantity = 0;
@@ -149,7 +153,7 @@ public class TraditionalFoodAdapter extends ArrayAdapter<TraditionalfoodClass> {
                         if (isinserted)
                         {
                             int price = 1;
-                            order_details[i] = "Id " + counter + " Seekh Kabab Price Rs " + 400 * quantity + " ";
+                            order_details[i] = "Id " + counter + " Seekh Kabab Price Dt " + 400 * quantity + " ";
                             counter++;
                             i++;
                             quantity = 0;
@@ -164,7 +168,7 @@ public class TraditionalFoodAdapter extends ArrayAdapter<TraditionalfoodClass> {
                         if (isinserted)
                         {
                             int price = 1;
-                            order_details[i] = "Id " + counter + " Tikka Price Rs " + 250 * quantity + " ";
+                            order_details[i] = "Id " + counter + " Tikka Price Dt " + 250 * quantity + " ";
                             counter++;
                             i++;
                             quantity = 0;
@@ -180,7 +184,7 @@ public class TraditionalFoodAdapter extends ArrayAdapter<TraditionalfoodClass> {
                         if (isinserted)
                         {
                             int price = 1;
-                            order_details[i] = "Id " + counter + " Sajji Price Rs " + 1550 * quantity + " ";
+                            order_details[i] = "Id " + counter + " Sajji Price Dt " + 1550 * quantity + " ";
                             counter++;
                             i++;
                             quantity = 0;

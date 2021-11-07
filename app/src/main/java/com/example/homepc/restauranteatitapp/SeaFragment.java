@@ -11,7 +11,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class SeaFragment extends Fragment {
 
 
@@ -27,10 +29,10 @@ public class SeaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_sea, container, false);
 
         ArrayList<SeaClass> sea_food = new ArrayList<SeaClass>();
-        sea_food.add(new SeaClass("Finger Fish", "6000 Dt", R.drawable.fingerfish,"10"));
-        sea_food.add(new SeaClass("Shrimp", "9000 Dt", R.drawable.shrimp,"20"));
-        sea_food.add(new SeaClass("Fried Fish", "6500 Dt", R.drawable.fishone,"05"));
-        sea_food.add(new SeaClass("Prawn Soup", "10000 Dt", R.drawable.prawnsoup,"15"));
+        sea_food.add(new SeaClass("Finger Fish", "600 Rs", R.drawable.fingerfish,"0"));
+        sea_food.add(new SeaClass("Shrimp", "900 Rs", R.drawable.shrimp,"0"));
+        sea_food.add(new SeaClass("Fried Fish", "650 Rs", R.drawable.fishone,"0"));
+        sea_food.add(new SeaClass("Prawn Soup", "450 Rs", R.drawable.prawnsoup,"0"));
 
         SeaAdapter seaadapter = new SeaAdapter(getActivity(),sea_food);
 

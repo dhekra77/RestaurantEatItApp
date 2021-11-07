@@ -30,10 +30,10 @@ public class ItalianFragment extends Fragment {
 
 
         ArrayList<ItalianClass> i_food = new ArrayList<ItalianClass>();
-        i_food.add(new ItalianClass("Pasta", "6500 Dt", R.drawable.pastaone,"10"));
-        i_food.add(new ItalianClass("Lasagna", "6500 Dt", R.drawable.lasagna,"10"));
-        i_food.add(new ItalianClass("Italian Pizza", "12500 Dt", R.drawable.pizza,"11"));
-        i_food.add(new ItalianClass("Focaccia Bread", "10000 Dt", R.drawable.italiaone,"0"));
+        i_food.add(new ItalianClass("Pasta", "450 Rs", R.drawable.pastaone,"0"));
+        i_food.add(new ItalianClass("Lasagna", "650 Rs", R.drawable.lasagna,"0"));
+        i_food.add(new ItalianClass("Italian Pizza", "1250 Rs", R.drawable.pizza,"0"));
+        i_food.add(new ItalianClass("Focaccia Bread", "450 Rs", R.drawable.italiaone,"0"));
 
         ItalianAdapter cadapter = new ItalianAdapter(getActivity(),i_food);
 

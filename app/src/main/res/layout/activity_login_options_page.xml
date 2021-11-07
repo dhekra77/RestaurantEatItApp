@@ -19,19 +19,6 @@
         android:text="User Information"
         android:textColor="#FFFFFF"
         android:visibility="invisible" />
-    <Button
-        android:id="@+id/order_details"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="80dp"
-        android:layout_alignParentTop="true"
-        android:text="Order Details"
-        android:background="#39796b"
-        android:visibility="invisible"
-        android:textColor="#FFFFFF"
-        />
 
 
     <LinearLayout
@@ -90,6 +77,18 @@
             android:textColor="#FFFFFF"
 
             />
+
+        <Button
+            android:id="@+id/order_details"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="8dp"
+            android:background="#39796b"
+            android:text="Order Details"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible" />
 
     </LinearLayout>
     </RelativeLayout>
